@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results>
+    <result>
+        <id>1024</id>
+        <name>max</name>
+        <type>Number</type>
+        <value>100</value>
+    </result>
+    <result>
+        <id>1025</id>
+        <name>desc</name>
+        <type>String</type>
+        <value>Tom</value>
+    </result>
+</results>
