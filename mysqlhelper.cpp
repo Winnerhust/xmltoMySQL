@@ -3,7 +3,7 @@
 #include <string.h>
 #include <string>
 #include <vector>
-#include <mysql/mysql.h>
+#include <mysql.h>
 #include "mysqlhelper.h"
 
 using namespace std;
