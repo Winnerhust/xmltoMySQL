@@ -11,8 +11,8 @@ using namespace std;
 using namespace inifile;
 using namespace tinyxml2;
 
-/* 配置文件路径名，默认为 config.ini */
-#define DEFAULT_CFG_FILE "config.ini"
+/* 配置文件路径名，默认为 xmltoMySQL.ini */
+#define DEFAULT_CFG_FILE "xmltoMySQL.ini"
 /* 默认的xml的根路径名 */
 #define DEFAULT_ROOT_ELEMENT_NAME "results"
 
