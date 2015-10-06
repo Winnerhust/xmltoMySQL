@@ -328,7 +328,7 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    printf("[INFO]the count of Xml File =%u\n",g_config.xmlFileList.size());
+    printf("[INFO]the count of Xml File =%lu\n",g_config.xmlFileList.size());
     for (size_t i = 0; i < g_config.xmlFileList.size(); ++i) {
 
         /* 传入 url 路径的会先下载到本地的临时文件中再处理 */

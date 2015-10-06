@@ -10,6 +10,7 @@ ifeq ($(strip $(MINGW)),MINGW)
 	MYSQLLDFLAGS=-L"C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\lib" -llibmysql
 else
 	MYSQLLDFLAGS=-lmysqlclient	
+	MYSQLCPPFLAGS=-I/usr/include/mysql
 endif 
 
 APP=xmltoMySQL
