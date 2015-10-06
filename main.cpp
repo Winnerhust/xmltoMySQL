@@ -97,6 +97,7 @@ void get_option(int argc, char *argv[])
             case 'h':
                 print_usage(argv);
                 exit(-1);
+
             case 'c':
                 g_config.cfgFilePath = optarg;
                 break;
@@ -120,26 +121,27 @@ void get_option(int argc, char *argv[])
                 }
 
                 break;
+
             case '?':
             case ':':
             default:
-            	print_usage(argv);
-            	printf("unknown parameter: -%c\n", optopt);
+                print_usage(argv);
+                printf("unknown parameter: -%c\n", optopt);
                 exit(-1);
         }
     }
-    
-	/* 没有带参数 */
-    if (argc == 1){
-    	print_usage(argv);
-    	exit(-1);
+
+    /* 没有带参数 */
+    if (argc == 1) {
+        print_usage(argv);
+        exit(-1);
     }
 
-	/* 没有解析完，说明有无效的参数 */
-    if (optind != argc){
-    	printf("[ERROR]There is some invalid options [%s]\n",argv[optind]);
-    	print_usage(argv);
-    	exit(-1);
+    /* 没有解析完，说明有无效的参数 */
+    if (optind != argc) {
+        printf("[ERROR]There is some invalid options [%s]\n", argv[optind]);
+        print_usage(argv);
+        exit(-1);
     }
 }
 
@@ -328,7 +330,8 @@ int main(int argc, char *argv[])
         return -1;
     }
 
-    printf("[INFO]the count of Xml File =%lu\n",g_config.xmlFileList.size());
+    printf("[INFO]the count of Xml File =%lu\n", g_config.xmlFileList.size());
+
     for (size_t i = 0; i < g_config.xmlFileList.size(); ++i) {
 
         /* 传入 url 路径的会先下载到本地的临时文件中再处理 */
