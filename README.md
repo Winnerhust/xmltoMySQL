@@ -7,16 +7,16 @@
 ```
 <列表头>
 <行>
-<字段></字段>
-<字段></字段>
+<字段>值</字段>
+<字段>值</字段>
 ...
-<字段></字段>
+<字段>值</字段>
 </行>
 <行>
-<字段></字段>
-<字段></字段>
+<字段>值</字段>
+<字段>值</字段>
 ...
-<字段></字段>
+<字段>值</字段>
 </行>
 ...
 </列表头>
@@ -57,7 +57,9 @@ mysql> select * from test;
 	该程序支持Linux环境和MinGW编译环境
 	
 * Linux下需要安装库mysqlclient
-		`sudo apt-get install libmysqlclient-dev`
+```
+sudo apt-get install libmysqlclient-dev
+```
 * Windows 需要安装mysqlclient
 
 2.在makefile中指定mysql头文件和动态库的位置
@@ -107,6 +109,7 @@ column=value,Value,string
 ```
 
 【DB】段用于配置连接mysql数据库相关的选项，包括要导入的数据库名和数据表的名字。
+
 【TABLE】段要指定要导入的xml和mysql数据库表各个字段之间的映射关系。每个column代表一个字段的映射。格式为
 ```
 column=xml的节点名，数据库中的字段名，数据库中字段的类型
@@ -136,5 +139,5 @@ column=xml的节点名，数据库中的字段名，数据库中字段的类型
 
 **注意事项**：
 
-* 目前远程xml文件使用wget进行下载。如果在Windows下使用该程序导入远程文件，需要安装windows版的wget，并添加其路径到系统变量PATH中去。
+* Windows版程序导入远程文件时，需要安装windows版的wget，并添加其路径到系统变量PATH中去，因为程序是使用wget来下载远程文件的。
 * Windows版程序运行时如果提示找不到libmysql.dll时，需要将其拷贝到xmltoMySQL所在的同一个目录下。
